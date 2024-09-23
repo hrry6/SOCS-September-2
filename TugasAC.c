@@ -1,18 +1,10 @@
-#include <stdio.h>
+#include<stdio.h>
+int main(){
+    int N;
+    long long p;
+    scanf("%d", &N);
+    p = (1LL << N) - 1;
+    printf("%.lld\n", p);
 
-int main()
-{
-    int a, total;
-
-    scanf("%d", &a);
-    
-    total = 1;
-
-    for(int i = 0; i<a;i++)
-    {
-        total = total * 2;
-    }
-
-    printf("%d\n", total - 1);
     return 0;
 }
