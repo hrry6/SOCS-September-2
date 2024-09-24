@@ -2,19 +2,20 @@
 
 int main()
 {
-    int a,b,c,d,e,f,g,h,i,j;
-
-    scanf("MATH6025 %d:20-%d:00 ", &a,&b);
-    scanf("MATH6025 %d:20-%d:00 ", &c,&d);
-    scanf("COMP6047 %d:20-%d:00 ", &e,&f);
-    scanf("COMP6047 %d:20-%d:00 ", &g,&h);
-    scanf("CHAR6013 %d:20-%d:00", &i,&j);
-
-    printf("MATH6025 %d:20-%d:00\n", ++a,++b);
-    printf("MATH6025 %d:20-%d:00\n", ++c,++d);
-    printf("COMP6047 %d:20-%d:00\n", ++e,++f);
-    printf("COMP6047 %d:20-%d:00\n", ++g,++h);
-    printf("CHAR6013 %d:20-%d:00\n", ++i,++j);
-
-    return 0;
+	int a[5],b[5],c[5],d[5];
+	char matkul[5][20];
+	
+	for(int i = 0;i < 5; i++)
+	{
+		scanf("%s %d:%d-%d:%d", matkul[i], &a[i], &b[i], &c[i], &d[i]);
+		--a[i];
+		--c[i];
+	}
+	
+	for(int i = 0;i < 5; i++)
+	{
+		printf("%s %02d:%02d-%02d:%02d\n", matkul[i], a[i], b[i], c[i], d[i]);
+	}
+	
+	return 0;
 }
